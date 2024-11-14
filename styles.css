@@ -1,0 +1,264 @@
+/* Lista de Pokémon */
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.pokemon {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.pokemon-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: #b6b6b6;
+    border-radius: 10px;
+}
+
+/* Nombre del Pokémon */
+.pokemon-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Paginación */
+#pagination {
+    margin-top: 20px;
+}
+
+.prev-button,
+.next-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.prev-button {
+    background-color: #f44336; /* Rojo */
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.next-button {
+    background-color: #4CAF50; /* Verde */
+    border-radius: 10px;
+}
+
+/* Buscador */
+.pokemon-search {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pokemon-search input,
+.pokemon-search button {
+    padding: 10px;
+    font-size: 1em;
+}
+
+.pokemon-search button {
+    margin-left: 5px;
+}
+
+/* Detalles de Pokémon */
+.pokemon-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(60, 58, 58, 0.805);
+    max-width: 900px;
+    margin: 20px auto;
+    
+}
+
+.pokemon-detail h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.pokemon-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pokemon-detail img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.pokemon-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 90px;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    margin: 0 auto 40px auto;
+}
+
+.pokemon-info div {
+    font-size: 16px;
+    color: #333;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto 40px auto;
+}
+
+.pokemon-info strong {
+    color: #000000;
+}
+
+/* Card de evoluciones */
+.pokemon-evolutions {
+    background: #424242 url(./body_gray_bg.png);
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    /* maximizar la card evoluciones */
+    width: 90%;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+/* Pokemones evoluciones */
+.pokemon-evolution {
+    display: inline-block;
+    width: 100px;
+    margin: 40px;
+    text-align: center;
+    background-image: url(./body_gray_bg.png);
+    color: #fff;
+}
+
+.pokemon-evolution img {
+    width: 130px;
+    height: auto;
+    /* centrar imagen */
+    display: flex;
+}
+
+/* Botones generales */
+.button {
+    background-color: #cc561b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.button-search {
+    margin-top: 10px;
+    background-color: #ce8620;
+    margin-top: 10px;
+    background: linear-gradient(0deg,rgb(169, 114, 10)0%,rgb(215, 178, 242) 100%);
+    border: none;
+    border-radius: 20px;
+
+}
+.button-search:hover {
+    background: rgba(0,3,255);
+    background: linear-gradient(0deg,rgb(74, 104, 173) 0%, rgb(158, 180, 202)100%);
+
+}
+
+/* Logo Pokémon */
+.logo-pokemon {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .pokemon-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .pokemon {
+        padding: 15px;
+    }
+
+    .pokemon-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokemon-list {
+        grid-template-columns: 1fr;
+    }
+
+    .pokemon-detail img {
+        max-width: 180px;
+    }
+
+    .pokemon-evolution img {
+        width: 120px;
+    }
+}
+
+/* Ajustes para pantallas entre 375px y 414px */
+@media (min-width: 375px) and (max-width: 414px) {
+    .pokemon-detail {
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .pokemon-list {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .pokemon {
+        padding: 25px;
+    }
+
+    .pokemon-evolution img {
+        width: 120px;
+    }
+}
+
+body {
+	font-family: "Segoe UI";
+	color: #212529;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	background: #abbaab;
+	background: linear-gradient(to right, #d0ece7, #edeed8);
+}
+
+.detail-button{
+    background-color: #c6bfbf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
