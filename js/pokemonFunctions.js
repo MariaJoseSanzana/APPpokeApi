@@ -80,7 +80,7 @@ export function searchPokemon(name) {
         .catch(error => {
             console.error(error);
             alert(error.message);
-            resetView();
+            resetView(); //devolver al inicio
         });
 }
 
